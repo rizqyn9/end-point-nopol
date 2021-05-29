@@ -39,3 +39,16 @@ Content-Type: application/json
 
 
 
+###
+GET http://localhost:3000/laporan
+
+###
+POST  http://localhost:3000/laporan/create
+Content-Type: application/json
+
+{
+    "title" : "haha",
+    "description" : "asdajhfjad",
+    "published" : "false"
+}
+

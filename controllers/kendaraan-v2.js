@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const Kendaraan = require('../models/kendaraan')
+const Kendaraan = require('../models/kendaraan-v2')
 
 router.get('/kendaraan', async(req,res,) => {
     const result = await  Kendaraan.find()

@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "test": "jest",
+    "start": "nodemon index.js",
+    "migrate" : "node test/migrate.js"
   },
   "keywords": [],
   "author": "",
@@ -19,5 +20,8 @@
     "pg": "^8.6.0",
     "pg-hstore": "^2.3.3",
     "sequelize": "^6.6.2"
+  },
+  "devDependencies": {
+    "jest": "^27.0.2"
   }
 }
