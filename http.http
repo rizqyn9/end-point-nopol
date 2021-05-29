@@ -1,0 +1,41 @@
+###
+GET http://localhost:3000
+
+###
+GET http://localhost:3000/kendaraan
+ 
+### Create 
+POST http://localhost:3000/kendaraan
+Content-Type: application/json
+
+{
+    "UserID"    : "Kode11", 
+    "Nopol"     : "MEmeek", 
+    "Type"      : "sadas"
+}
+
+### Get @
+GET http://localhost:3000/kendaraan/60b0fd0631d7ea1b76df2571
+
+### update @
+POST http://localhost:3000/kendaraan/update/60b0fd0631d7ea1b76df2571
+Content-Type: application/json
+
+{
+    "UserID"    : "Update", 
+    "Nopol"     : "MEmeek", 
+    "Type"      : "sadas"
+}
+
+### delete @
+GET http://localhost:3000/kendaraan/delete/60b0fd0631d7ea1b76df2571
+Content-Type: application/json
+
+{
+    "UserID"    : "Update", 
+    "Nopol"     : "MEmeek", 
+    "Type"      : "sadas"
+}
+
+
+
