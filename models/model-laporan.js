@@ -1,14 +1,40 @@
+const {v4 : uuidv4} = require('uuid')
+const Kendaraan = require('./model-kendaraan')
+
 module.exports = (sequelize, Sequelize) => {
     const Laporan = sequelize.define("laporan", {
-      title: {
+      laporanUUID : {
+        type: Sequelize.UUID,
+        primaryKey: true,
+        allowNull: false,
+        defaultValue: () => uuidv4()
+      },
+      userID : {
         type: Sequelize.STRING
       },
-      description: {
+      kendaraanID: {
         type: Sequelize.STRING
       },
-      published: {
-        type: Sequelize.BOOLEAN
-      }
+      type: {
+        type: Sequelize.STRING
+      },
+      judul: {
+        type: Sequelize.STRING
+      },
+      lokasi: {
+        type: Sequelize.STRING
+      },
+      tanggal: {
+        type: Sequelize.STRING
+      },
+      imagePath: {
+        type: Sequelize.STRING
+      },
+      deskripsi: {
+        type: Sequelize.STRING
+      },
     });
+    // Laporan.hasMany(Kendaraan, { foreignKey : "KendaraanCode" , sourceKey : "nopol"})
+    // Kendaraan.belongsTo(Laporan, { foreignKey : "KendaraanCode" , targetKey : "nopol"})
     return Laporan;
   };

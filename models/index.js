@@ -19,5 +19,8 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 db.Laporan = require("./model-laporan")(sequelize, Sequelize);
+db.Kendaraan = require("./model-kendaraan")(sequelize, Sequelize);
+db.Tag = require("./model-tag")(sequelize, Sequelize);
+db.Pujian = require("./model-pujian")(sequelize, Sequelize);
 
 module.exports = db;
