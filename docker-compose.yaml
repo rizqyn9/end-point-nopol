@@ -33,6 +33,17 @@ services:
       - postgres
     restart: unless-stopped
 
+  webserver:
+    image: nginx:alpine
+    container_name: webserver
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "80:80"
+      - "443:443"
+    networks:
+      - postgres
+
 networks:
   postgres:
     driver: bridge
