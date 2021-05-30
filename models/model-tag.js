@@ -4,7 +4,7 @@ module.exports = (sequelize, Sequelize) => {
     const Tag = sequelize.define("tag", {
       tagUUID : {
         type: Sequelize.UUID,
-        primaryKey: true,
+        // primaryKey: true,
         allowNull: false,
         defaultValue: () => uuidv4()
       },

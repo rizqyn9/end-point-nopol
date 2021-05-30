@@ -19,7 +19,7 @@ Content-Type: application/json
       "deskripsi": "Deskripsi A"
 }
 ### UPDATE ONE
-POST  http://localhost:3000/laporan/update/7
+POST  http://localhost:3000/laporan/update/1
 Content-Type: application/json
 
 {
@@ -34,7 +34,7 @@ Content-Type: application/json
 }
 
 ### FIND ONE
-GET http://localhost:3000/laporan/2
+GET http://localhost:3000/laporan/1
 
 ### DELETE ONE
 GET http://localhost:3000/laporan/delete/6

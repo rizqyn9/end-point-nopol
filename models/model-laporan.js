@@ -5,7 +5,7 @@ module.exports = (sequelize, Sequelize) => {
     const Laporan = sequelize.define("laporan", {
       laporanUUID : {
         type: Sequelize.UUID,
-        primaryKey: true,
+        // primaryKey: true,
         allowNull: false,
         defaultValue: () => uuidv4()
       },
@@ -34,7 +34,7 @@ module.exports = (sequelize, Sequelize) => {
         type: Sequelize.STRING
       },
     });
-    // Laporan.hasMany(Kendaraan, { foreignKey : "KendaraanCode" , sourceKey : "nopol"})
-    // Kendaraan.belongsTo(Laporan, { foreignKey : "KendaraanCode" , targetKey : "nopol"})
+    // Laporan.hasMany(Kendaraan)
+    // Kendaraan.belongsTo(Laporan)
     return Laporan;
   };

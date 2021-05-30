@@ -23,4 +23,11 @@ db.Kendaraan = require("./model-kendaraan")(sequelize, Sequelize);
 db.Tag = require("./model-tag")(sequelize, Sequelize);
 db.Pujian = require("./model-pujian")(sequelize, Sequelize);
 
+
+// Realtions DB
+db.Laporan.hasMany(db.Kendaraan)
+db.Kendaraan.belongsTo(db.Laporan)
+
+
+
 module.exports = db;
